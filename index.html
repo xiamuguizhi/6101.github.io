@@ -30,7 +30,6 @@
 	<a class="home" href="#/home">&#8629; 返回首页</a>
 	</xmp>
 </article>
-<p>测试 #/{{url}}</p>
 <article class="article">
 	<div id="container"></div>
 </article>
@@ -46,8 +45,9 @@ gitConfig={
 <script src="i/gitblog.js"></script>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+var test = window.location.href;
 var gitment = new Gitment({
-  id: 'location.href', // 可选。默认为 location.href
+  id: 'alert(test);', // 可选。默认为 location.href
   owner: '6101',
   repo: '6101.github.io',
   oauth: {
