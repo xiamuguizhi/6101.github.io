@@ -1,0 +1,302 @@
+/* 部分css扣自https://biji.io/和百度谷歌 2017/4/13 六十一 */
+html{font:1em "Avenir Next",Avenir,"Helvetica Neue",Helvetica,"Lantinghei SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑", "STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;color:#222;}
+
+
+textarea,input,option,select,button{font:inherit;}
+
+.h{opacity:0;pointer-events:none;}
+
+a,input,button{transition:.3s ease;}
+
+
+
+
+body{
+	margin:0 auto;
+	max-width:40em;
+	background-color:#CCE8CF;
+}
+
+xmp{
+	color:#DDD;
+}
+
+header{
+	text-align:center;
+	padding:3em 0;
+}
+header h1{
+	font-size:3em;
+	margin:0;
+}
+header h1 a{
+	color:#222;
+	text-decoration:none;
+}
+header p{
+	color:#999;
+	margin:0;
+}
+.post a {
+          font-family: "微软雅黑","Open Sans","Helvetica Neue",Arial,sans-serif;
+          position: relative;
+          line-height: 36px;
+          color: #222;
+          text-decoration: none;
+        }
+
+        .post a:hover {
+          color: #222;
+        }         
+        .post a:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom:-5px;
+          left: 0;
+          background-color: #222;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          -o-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          -o-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+        }         
+        .post a:hover:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          -o-transform: scaleX(1);
+          transform: scaleX(1);
+        }       
+section{
+	counter-reset:article-num;
+}
+section article{
+	padding:1em 0;
+	line-height:34px;
+}
+section article h3{
+	margin:0 4em 0 3em;
+}
+section article .num{
+	float:left;
+	width:3em;
+	text-align:right;
+	color:#999;
+	counter-increment:article-num;
+}
+section article .num:before{
+	content:counter(article-num);
+}
+section article .num:after{
+	content:'. ';
+}
+section article .size{
+	float:right;
+	color:#999;
+}
+@media(max-width:600px){
+
+	section article h3{
+		margin:0 1em 0 3em;
+	}
+	section article .size{
+		display:none;
+	}
+}
+
+article .size:after{
+	content:' 字';
+}
+
+footer{
+	color:#999;
+	padding:3em 0;
+	text-align:center;
+}
+
+.article{
+	overflow-x:hidden;
+}
+
+html[step="home"] .article{
+	display:none;
+}
+
+
+html[step="article"] section{
+	display:none;
+}
+
+
+
+
+.text{
+	font-size:1.2em;
+	max-width:50em;
+	margin:0 auto;
+	padding:1em;
+	word-wrap:break-word;
+	word-break:normal;
+}
+.text h1{
+	font-size:2em;
+}
+.text img{
+	display:block;
+	padding:.7em;
+	background:#FFF;
+	box-shadow:
+		0 1px 7px rgba(0,0,0,.1),
+		0 0 0 1px rgba(40,0,0,.1);
+	margin:1em 0;
+
+	max-width:100%;
+	box-sizing:border-box;
+}
+
+.text p{
+	text-indent:1em;
+}
+.text ol,..text ul {
+	margin: 10px 0;
+	padding: 10px 40px;
+	background: #fafafa;
+	line-height: 38px;
+}
+
+.text ol li {
+	list-style-type: decimal;
+}
+
+.text ul li {
+	list-style-type: disc;
+}
+
+.text ol p,.text ul p {
+	margin: 0
+}
+
+.text pre,code {
+	font-family: "Courier New","Verdana","Trebuchet MS","Helvetica",sans-serif;
+}
+
+.text pre {
+	position: relative;
+	line-height: 2rem;
+	margin: 20px 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.text pre code, code {
+	display: block;
+	overflow: auto;
+	max-height: 280px;
+	font-size: .96rem;
+	padding: 1rem 2rem;
+	-webkit-overflow-scrolling: touch;
+	-overflow-scrolling: touch;
+	line-height: 2rem;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+}
+
+.text code {
+	display: inline-block;
+	margin: 0 .2rem -.4rem;
+	padding: 0 .2rem;
+	color: #222;
+	line-height: 1.6rem;
+	border-radius: 3px;
+}
+/*.article ul{padding-left:2em;list-style-type:disc;}*/
+
+.text blockquote,q {
+	quotes: none;
+}
+
+.text blockquote:before,blockquote:after,q:before,q:after {
+	content: none;
+}
+
+.text blockquote,q {
+	background: #CCE8CF;
+	margin: 20px 0;
+	padding: 2.5rem 4rem;
+	position: relative;
+	word-wrap: break-word;
+}
+
+.text blockquote:before,q:before,blockquote:after,q:after {
+	content: '“';
+	font-size: 4rem;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	font-family: "SimHei",sans-serif;
+}
+
+.text blockquote:after,q:after {
+	content: '”';
+	font-size: 4rem;
+	position: absolute;
+	top: initial;
+	left: initial;
+	bottom: -1rem;
+	right: 0;
+	font-family: "SimHei",sans-serif;
+}
+
+.text blockquote p,q p {
+	margin: 0!important;
+	padding: 0;
+	line-height: 1.8rem;
+	overflow: hidden;
+}
+.text hr {
+	border: 0;
+	height: 1px;
+	width: 100%;
+	background: #222;
+	margin: 0 auto;
+}
+.text ul li:after{
+	content:'';
+	position:absolute;
+	top:50%;
+	left:.4em;
+
+	width:.4em;height:.4em;
+	margin-top:-.2em;
+	background:#333;
+	border-radius:9em;
+
+}
+.text a:link{
+	color: #222;
+}
+
+.text a:visited {
+	color: #222;
+}
+
+.text a:hover {
+	color: #222;
+}
+
+.article .size{
+	display:block;
+	text-align:center;
+	padding:4em 0;
+	color:#999;
+}
+
+.article .home{
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	color:#999;
+	padding-bottom:5em;
+}
