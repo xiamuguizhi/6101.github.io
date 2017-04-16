@@ -45,16 +45,8 @@ gitConfig={
 <script src="i/gitblog.js"></script>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-function GetUrlPara()
-{
-var url = document.location.toString();
-var arrUrl = url.split("#");
-var para = arrUrl[1];
-return para;
-}
-
 var gitment = new Gitment({
-  id: 'GetUrlPara()', // 可选。默认为 location.href
+  id: 'location.href', // 可选。默认为 location.href
   owner: '6101',
   repo: '6101.github.io',
   oauth: {
@@ -64,3 +56,5 @@ var gitment = new Gitment({
 })
 gitment.render('container')
 </script>
+</body>
+</html>
