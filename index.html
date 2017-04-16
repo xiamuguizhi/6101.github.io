@@ -31,7 +31,7 @@
 	</xmp>
 </article>
 <article class="article">
-	<div id="gitmentContainer"></div>
+	<div id="container"></div>
 </article>
 <footer>&#9829; 感谢 GitHub 提供存储 トトロ技术支持<br>本站文章基于<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank"><img src="http://benzi-10011942.cos.myqcloud.com/img/cc-by-nc-sa.svg"></a>国际4.0协议</footer>
 <script>
@@ -45,15 +45,22 @@ gitConfig={
 <script src="i/gitblog.js"></script>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-    var gitment = new Gitment({
-		owner: '6101',
-		repo: '6101.github.io',
-        oauth: {
-            client_id: '6447bb83f15cc98f2178',
-            client_secret: '88828586ee1e1fd1a44dda9758c6044c2792da66',
-        },
-    })
-    gitment.render('gitmentContainer')
+function GetUrlPara()
+{
+var url = document.location.toString();
+var arrUrl = url.split("#");
+var para = arrUrl[1];
+return para;
+}
+
+var gitment = new Gitment({
+  id: 'GetUrlPara()', // 可选。默认为 location.href
+  owner: '6101',
+  repo: '6101.github.io',
+  oauth: {
+    client_id: '6447bb83f15cc98f2178',
+    client_secret: '88828586ee1e1fd1a44dda9758c6044c2792da66',
+  },
+})
+gitment.render('container')
 </script>
-</body>
-</html>
