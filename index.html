@@ -28,7 +28,6 @@
 	<div class="text">{{{text}}}</div>
 	<span class="size">{{size}}</span>
 	<a class="home" href="#/home">&#8629; 返回首页</a>
-		<p>{{title}}<p>
 	</xmp>
 </article>
 <article class="article">
@@ -46,8 +45,14 @@ gitConfig={
 <script src="i/gitblog.js"></script>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+function check(){
+  var title=document.title;
+  document.form1.action="http://www.111111111111111111111111111111111111111111111111111111111111.cn/#/"+title+".md";
+  document.form1.submit();
+}
+	
 var gitment = new Gitment({
-  id: 'post 1', // 可选。默认为 location.href
+  id: 'check', // 可选。默认为 location.href
   owner: '6101',
   repo: '6101.github.io',
   oauth: {
